@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autokolcsonzo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="500">
+        Title="MainWindow" Height="1000" Width="500">
     <Grid Margin="30">
         <StackPanel>
             <TextBlock Text="Autókölcsönző"
@@ -13,9 +13,77 @@
                        FontWeight="Bold" 
                        Foreground="Black" 
                        HorizontalAlignment="Center"/>
-            
-            
-            
+            <TextBlock Text="Név"
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="Black" 
+                       Margin="0,10,0,0"/>
+            <TextBox x:Name="nev" FontSize="15" Padding="2"/>
+            <TextBlock Text="Életkor"
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="Black" 
+                       Margin="0,10,0,0"/>
+            <TextBox x:Name="eletkor" FontSize="15" Padding="2"/>
+            <TextBlock Text="Jogosítvány száma"
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="Black" 
+                       Margin="0,10,0,0"/>
+            <TextBox x:Name="jogositvanySzam" FontSize="15" Padding="2"/>
+            <TextBlock Text="Autó"
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="Black" 
+                       Margin="0,10,0,0"/>
+            <ComboBox FontSize="15" x:Name="auto_valaszt">
+                <ComboBoxItem>Suzuki Swift – 12 000 Ft / nap</ComboBoxItem>
+                <ComboBoxItem>Toyota Corolla – 18 000 Ft / nap</ComboBoxItem>
+                <ComboBoxItem>BMW 3 – 30 000 Ft / nap</ComboBoxItem>
+                <ComboBoxItem>Tesla Model 3 – 35 000 Ft / nap</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Text="Kölcsönzés időtartama (nap)"
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="Black" 
+                       Margin="0,10,0,0"/>
+            <TextBox x:Name="kolcsonzesIdotartama" FontSize="15" Padding="2"/>
+            <TextBlock Text="Biztosítás"
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="Black" 
+                       Margin="0,10,0,0"/>
+            <RadioButton x:Name="radioButton1" Content="Alap biztosítás" FontSize="15" Margin="0,10,0,0" VerticalContentAlignment="Center" GroupName="biztositas"/>
+            <RadioButton x:Name="radioButton2" Content="Extra biztosítás" FontSize="15" VerticalContentAlignment="Center" GroupName="biztositas"/>
+            <RadioButton x:Name="radioButton3" Content="Teljes biztosítás" FontSize="15" VerticalContentAlignment="Center" GroupName="biztositas"/>
+            <TextBlock Text="Extra szolgáltatások"
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="Black" 
+                       Margin="0,10,0,0"/>
+            <CheckBox x:Name="checkBox1" Content="GPS – +1000 Ft / nap" FontSize="15" Margin="0,10,0,0" VerticalContentAlignment ="Center"/>
+            <CheckBox x:Name="checkBox2" Content="Gyerekülés – +1500 Ft / nap" FontSize="15" VerticalContentAlignment ="Center"/>
+            <CheckBox x:Name="checkBox3" Content="Extra sofőr – +2500 Ft / nap" FontSize="15" VerticalContentAlignment ="Center"/>
+            <CheckBox x:Name="checkBox4" Content="Autópálya matrica – +5000 Ft egyszeri díj" FontSize="15" VerticalContentAlignment ="Center"/>
+            <TextBlock Text="Fizetési mód:"
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="Black" 
+                       Margin="0,10,0,0"/>
+            <RadioButton x:Name="radioButton4" Content="Készpénz" FontSize="15" Margin="0,10,0,0" VerticalContentAlignment="Center" GroupName="fizetes"/>
+            <RadioButton x:Name="radioButton5" Content="Bankkártya" FontSize="15" VerticalContentAlignment="Center" GroupName="fizetes"/>
+
+            <CheckBox x:Name="checkBox5" Content="Elfogadom a bérlési feltételeket" FontSize="18" FontStyle="Italic" Margin="0,20,0,0" VerticalContentAlignment ="Center"/>
+
+            <Button Content="AUTÓ FOGLALÁSA" 
+                    FontSize="20" 
+                    FontWeight="Bold" 
+                    Foreground="White" 
+                    Background="DarkSlateBlue" 
+                    Margin="0,20,0,0" 
+                    Padding="15"
+                    Click="Kolcsonzes_Click"/>
+
         </StackPanel>
     </Grid>
 </Window>
